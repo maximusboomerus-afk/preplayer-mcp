@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.maximus-boomerus/preplayer",
+  "description": "Deterministic text prep for agents. Pay per call via x402 USDC.",
+  "title": "PrepLayer.ai",
+  "version": "0.2.0",
+  "websiteUrl": "https://preplayer.maximus-boomerus.workers.dev/landing",
+  "repository": {
+    "url": "https://github.com/looperteam/preplayer-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://preplayer.maximus-boomerus.workers.dev/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "x402": {
+        "version": 1,
+        "discovery": "https://preplayer.maximus-boomerus.workers.dev/.well-known/x402",
+        "manifest": "https://preplayer.maximus-boomerus.workers.dev/v1/manifest.json",
+        "pricing": "per-call USDC, $0.002-$0.01 single, $0.04/call batch",
+        "networks": [
+          "eip155:8453",
+          "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+          "eip155:137",
+          "eip155:42161"
+        ],
+        "payTo": "0x8cb59b1bffb39c130ab85a8177e93eae9ddbaf10",
+        "asset": "USDC",
+        "facilitator": "https://api.cdp.coinbase.com/platform/v2/x402"
+      }
+    }
+  }
+}
